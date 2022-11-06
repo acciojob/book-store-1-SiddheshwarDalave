@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@RequestMapping("books")
+@RequestMapping("books")
 public class BookController {
 
    HashMap<Integer,Book> books=new HashMap<>();
