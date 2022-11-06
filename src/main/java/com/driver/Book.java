@@ -2,7 +2,7 @@ package com.driver;
 
 public class Book {
     
-     private int id;
+     private  static int id;
 
      private String name;
 
@@ -21,7 +21,7 @@ public class Book {
     }
 
     public int getId() {
-        return id;
+        return id=this.id;
     }
 
     public void setId(int id) {
