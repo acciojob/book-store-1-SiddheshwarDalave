@@ -79,12 +79,13 @@ public class BookController {
     //ok
     @DeleteMapping("/delete-book-by-id/{id}")
     public ResponseEntity deleteBookById(@PathVariable Integer id) {
-        for(int i=0;i<bookList.size();i++){
-            if(bookList.get(i).getId()==id){
-                bookList.remove(i);
+
+            for(Book book:bookList){
+                if(book.getId()==id)
+                bookList.remove(id);
                 return new ResponseEntity<>(HttpStatus.OK);
             }
-        }
+
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
     // get request /get-all-books
